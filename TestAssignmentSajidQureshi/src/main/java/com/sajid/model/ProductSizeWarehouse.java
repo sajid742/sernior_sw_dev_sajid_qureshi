@@ -20,12 +20,12 @@ public class ProductSizeWarehouse implements Serializable {
 	
 	@NotEmpty
 	@ManyToOne
-	(fetch = FetchType.LAZY)
+	(fetch = FetchType.EAGER)
 	private ProductSize productSize;
 	
 	@NotEmpty
 	@ManyToOne
-	(fetch = FetchType.LAZY)
+	(fetch = FetchType.EAGER)
 	private Warehouse warehouse;
 
 	@NotEmpty
@@ -44,8 +44,8 @@ public class ProductSizeWarehouse implements Serializable {
 	@NotEmpty
 	private Integer reorderPoint;
 
-	@NotEmpty
-	private String name;
+//	@NotEmpty
+//	private String name;
 
 	public Integer getAvailableQty() {
 		return availableQty;
@@ -67,9 +67,9 @@ public class ProductSizeWarehouse implements Serializable {
 		return minOrderQty;
 	}
 
-	public String getName() {
-		return name;
-	}
+//	public String getName() {
+//		return name;
+//	}
 
 	public ProductSize getProductSize() {
 		return productSize;
@@ -107,9 +107,9 @@ public class ProductSizeWarehouse implements Serializable {
 		this.minOrderQty = minOrderQty;
 	}
 	
-	public void setName(String name) {
-		this.name = name;
-	}
+//	public void setName(String name) {
+//		this.name = name;
+//	}
 	
 	public void setProductSize(ProductSize productSize) {
 		this.productSize = productSize;

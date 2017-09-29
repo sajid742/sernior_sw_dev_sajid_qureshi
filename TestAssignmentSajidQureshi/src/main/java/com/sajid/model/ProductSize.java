@@ -20,15 +20,15 @@ public class ProductSize implements Serializable {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Integer id;
 
-	@NotEmpty
-	private String name;
+//	@NotEmpty
+//	private String name;
 	
 	@NotEmpty
-	@ManyToOne(fetch = FetchType.LAZY)
+	@ManyToOne(fetch = FetchType.EAGER)
 	private Product product;
 	
 	@NotEmpty
-	@ManyToOne(fetch = FetchType.LAZY)
+	@ManyToOne(fetch = FetchType.EAGER)
 	private Size size;
 
 	@OneToMany(fetch = FetchType.LAZY, mappedBy = "productSize")
@@ -38,9 +38,9 @@ public class ProductSize implements Serializable {
 		return id;
 	}
 	
-	public String getName() {
-		return name;
-	}
+//	public String getName() {
+//		return name;
+//	}
 
 	public Product getProduct() {
 		return product;
@@ -58,9 +58,9 @@ public class ProductSize implements Serializable {
 		this.id = id;
 	}
 
-	public void setName(String name) {
-		this.name = name;
-	}
+//	public void setName(String name) {
+//		this.name = name;
+//	}
 
 	public void setProduct(Product product) {
 		this.product = product;
