@@ -21,6 +21,11 @@
 				        <th>Product Name</th>
 				        <th>Product Size</th>
 				        <th>In Stock</th>
+				        <th>Available</th>
+				        <th>In Transit</th>
+				        <th>MOQ</th>
+				        <th>QPB</th>
+				        <th>ROP</th>
 				        <th width="100"></th>
 				        <th width="100"></th>
 					</tr>
@@ -32,6 +37,11 @@
 						<td>${productSizeWarehouse.productSize.product.name}</td>
 						<td>${productSizeWarehouse.productSize.size.name}</td>
 						<td>${productSizeWarehouse.inStock}</td>
+						<td>${productSizeWarehouse.availableQty}</td>
+						<td>${productSizeWarehouse.inTransit}</td>
+						<td>${productSizeWarehouse.minOrderQty}</td>
+						<td>${productSizeWarehouse.qtyPerBox}</td>
+						<td>${productSizeWarehouse.reorderPoint}</td>						
 						<td><a href="<c:url value='/Product/edit-product-${productSizeWarehouse.id}' />" class="btn btn-success custom-width">edit</a></td>
 						<td><a href="<c:url value='/Product/delete-product-${productSizeWarehouse.id}' />" class="btn btn-danger custom-width">delete</a></td>
 					</tr>
