@@ -22,7 +22,10 @@ public class Warehouse implements Serializable {
 
 	@NotEmpty
 	private String name;
-	
+
+	@NotEmpty
+	private String location;
+
 	@OneToMany(fetch = FetchType.LAZY, mappedBy = "productSize")
 	private Set<ProductSizeWarehouse> productSizeWarehouse;
 
@@ -36,6 +39,10 @@ public class Warehouse implements Serializable {
 
 	public Integer getId() {
 		return id;
+	}
+
+	public String getLocation() {
+		return location;
 	}
 
 	public String getName() {
@@ -52,6 +59,10 @@ public class Warehouse implements Serializable {
 
 	public void setId(Integer id) {
 		this.id = id;
+	}
+
+	public void setLocation(String location) {
+		this.location = location;
 	}
 
 	public void setName(String name) {

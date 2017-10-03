@@ -83,6 +83,11 @@ public final class productSizeWarehouseslist_jsp extends org.apache.jasper.runti
       out.write("\t\t\t\t        <th>Product Name</th>\r\n");
       out.write("\t\t\t\t        <th>Product Size</th>\r\n");
       out.write("\t\t\t\t        <th>In Stock</th>\r\n");
+      out.write("\t\t\t\t        <th>Available</th>\r\n");
+      out.write("\t\t\t\t        <th>In Transit</th>\r\n");
+      out.write("\t\t\t\t        <th>MOQ</th>\r\n");
+      out.write("\t\t\t\t        <th>QPB</th>\r\n");
+      out.write("\t\t\t\t        <th>ROP</th>\r\n");
       out.write("\t\t\t\t        <th width=\"100\"></th>\r\n");
       out.write("\t\t\t\t        <th width=\"100\"></th>\r\n");
       out.write("\t\t\t\t\t</tr>\r\n");
@@ -182,6 +187,21 @@ public final class productSizeWarehouseslist_jsp extends org.apache.jasper.runti
           out.write("\t\t\t\t\t\t<td>");
           out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${productSizeWarehouse.inStock}", java.lang.String.class, (PageContext)_jspx_page_context, null));
           out.write("</td>\r\n");
+          out.write("\t\t\t\t\t\t<td>");
+          out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${productSizeWarehouse.availableQty}", java.lang.String.class, (PageContext)_jspx_page_context, null));
+          out.write("</td>\r\n");
+          out.write("\t\t\t\t\t\t<td>");
+          out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${productSizeWarehouse.inTransit}", java.lang.String.class, (PageContext)_jspx_page_context, null));
+          out.write("</td>\r\n");
+          out.write("\t\t\t\t\t\t<td>");
+          out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${productSizeWarehouse.minOrderQty}", java.lang.String.class, (PageContext)_jspx_page_context, null));
+          out.write("</td>\r\n");
+          out.write("\t\t\t\t\t\t<td>");
+          out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${productSizeWarehouse.qtyPerBox}", java.lang.String.class, (PageContext)_jspx_page_context, null));
+          out.write("</td>\r\n");
+          out.write("\t\t\t\t\t\t<td>");
+          out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${productSizeWarehouse.reorderPoint}", java.lang.String.class, (PageContext)_jspx_page_context, null));
+          out.write("</td>\t\t\t\t\t\t\r\n");
           out.write("\t\t\t\t\t\t<td><a href=\"");
           if (_jspx_meth_c_url_2((javax.servlet.jsp.tagext.JspTag) _jspx_th_c_forEach_0, _jspx_page_context, _jspx_push_body_count_c_forEach_0))
             return true;

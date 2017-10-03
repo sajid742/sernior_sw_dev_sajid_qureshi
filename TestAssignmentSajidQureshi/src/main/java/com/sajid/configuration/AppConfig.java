@@ -19,6 +19,8 @@ import org.springframework.web.servlet.view.JstlView;
 import com.sajid.converter.RoleToUserProfileConverter;
 import com.sajid.converter.StringToBrandConverter;
 import com.sajid.converter.StringToProductTypeConverter;
+import com.sajid.service.ProductService;
+import com.sajid.service.ProductServiceImpl;
 
 
 @Configuration
@@ -89,6 +91,12 @@ public class AppConfig extends WebMvcConfigurerAdapter{
     public void configurePathMatch(PathMatchConfigurer matcher) {
         matcher.setUseRegisteredSuffixPatternMatch(true);
     }
+    
+    @Bean
+	public ProductService getSampleService() {
+		return new ProductServiceImpl();
+	}
+
     
 }
 
