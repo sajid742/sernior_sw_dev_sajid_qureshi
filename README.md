@@ -14,5 +14,4 @@ Version
 How do I get set up?
 
 Checkout code from git in "test_directory" Create database "testdb" in your local MySQL Create user login/pwd "testuser/testuser" and grant access to the "testdb" Run
-testdata.sql script to insert sample data Execute mvn jetty:run in "test_directory" directory Summary of set up Configuration Dependencies Database configuration How to
-run tests Deployment instructions
+testdata.sql script to insert sample data Execute mvn jetty:run in "test_directory" directory Summary of set up Configuration Dependencies Database configuration 
